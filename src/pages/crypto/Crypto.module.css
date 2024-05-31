@@ -1,0 +1,51 @@
+.crypto {
+  padding: 0 20px;
+}
+
+.crypto_name {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 100px auto;
+  margin-bottom: 50px;
+}
+
+.crypto_name img {
+  max-width: 100px;
+}
+
+.crypto_name p b {
+  font-weight: 500;
+  font-size: 44px;
+}
+
+.crypto_chart {
+  margin: auto;
+  height: 250px;
+  max-width: 600px;
+}
+
+.crypto_info {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 70px auto;
+}
+
+.crypto_info ul {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #5f5d5f;
+}
+
+.crypto_info ul li:last-child {
+  font-weight: 300;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

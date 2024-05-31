@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(#403a3e, #94404e);
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+.--btn {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  margin: 0 5px 0 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  border-radius: 6px;
+}
+
+.--small-btn {
+  white-space: nowrap;
+}
+
+.--btn:hover {
+  box-shadow: 0 0 20px 10px #94404e92;
+}
+
+.--yellowGreenBtn:hover {
+  box-shadow: 0 0 30px 10px #403a3e8a;
+}
+
+.--btn-lg {
+  padding: 8px 10px;
+}
+
+.--btn-block {
+  width: 100%;
+}
+
+.--btn-primary {
+  color: #fff;
+  background: #a3384a;
+}
+.--btn-secondary {
+  color: #fff;
+  border: 1px solid #fff;
+  background: transparent;
+}
+.--btn-danger {
+  color: #fff;
+  background: #403a3e;
+}
+
+.--btn-success {
+  color: #fff;
+  background: #28a745;
+}
+
+.--btn-red {
+  color: #fff;
+  background: rgba(189, 9, 9, 0.847);
+}
