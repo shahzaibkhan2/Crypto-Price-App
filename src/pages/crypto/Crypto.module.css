@@ -43,9 +43,3 @@
 .crypto_info ul li:last-child {
   font-weight: 300;
 }
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
