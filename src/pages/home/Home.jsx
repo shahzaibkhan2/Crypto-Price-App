@@ -26,7 +26,7 @@ const Home = () => {
       <Hero />
       <div className={styles.crypto_table}>
         <div className={styles.table_layout}>
-          <p>#</p>
+          <p>Rank</p>
           <p>Coins</p>
           <p>Price</p>
           <p style={{ textAlign: "center" }}>24H Change</p>
