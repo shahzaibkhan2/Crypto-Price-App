@@ -6,6 +6,7 @@ import Crypto from "./pages/crypto/Crypto";
 import Footer from "./components/footer/Footer";
 import Login from "./pages/auth/login/Login";
 import Register from "./pages/auth/register/Register";
+import Welcome from "./components/transactions/Welcome";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/crypto/:cryptoId" element={<Crypto />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/transactions" element={<Welcome />} />
       </Routes>
       <Footer />
     </div>

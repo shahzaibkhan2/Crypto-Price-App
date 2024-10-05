@@ -1,10 +1,106 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
   font-family: "Outfit", sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-gradient-welcome {
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 30%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-services {
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 0%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 100%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-transactions {
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 50%
+    ),
+    radial-gradient(at 50% 0%, hsla(225, 39%, 25%, 1) 0, transparent 50%);
+}
+
+.gradient-bg-footer {
+  background-color: #0f0e13;
+  background-image: radial-gradient(
+      at 0% 100%,
+      hsla(253, 16%, 7%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 50% 150%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
+}
+
+.blue-glassmorphism {
+  background: rgb(39, 51, 89, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* white glassmorphism */
+.white-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.eth-card {
+  background-color: #a099ff;
+  background-image: radial-gradient(
+      at 83% 67%,
+      rgb(53, 183, 59) 0,
+      transparent 58%
+    ),
+    radial-gradient(at 67% 20%, rgb(162, 87, 90) 0, transparent 59%),
+    radial-gradient(at 88% 35%, rgb(101, 130, 197) 0, transparent 50%),
+    radial-gradient(at 31% 91%, rgb(200, 133, 121) 0, transparent 52%),
+    radial-gradient(at 27% 71%, rgb(226, 27, 107) 0, transparent 49%),
+    radial-gradient(at 74% 89%, rgb(223, 156, 89) 0, transparent 51%),
+    radial-gradient(at 53% 75%, rgb(15, 117, 107) 0, transparent 45%);
+}
+
+.text-gradient {
+  background-color: #fff;
+  background-image: radial-gradient(
+      at 4% 36%,
+      hsla(0, 0%, 100%, 1) 0,
+      transparent 53%
+    ),
+    radial-gradient(at 100% 60%, rgb(0, 0, 0) 0, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a {
@@ -36,11 +132,25 @@ li {
   border-radius: 6px;
 }
 
+.--hero-btn {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 12px 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  border-radius: 9999px;
+}
+
 .--small-btn {
   white-space: nowrap;
 }
 
-.--btn:hover {
+.--btn,
+.--hero-btn:hover {
   box-shadow: 0 0 20px 10px #94404e92;
 }
 

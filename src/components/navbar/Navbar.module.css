@@ -7,6 +7,11 @@
   border-bottom: 0.5px solid #656565;
 }
 
+.navbar h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
 .navbar h2 span {
   background: #94404e;
   padding: 5px 10px;
@@ -29,15 +34,17 @@
   align-items: center;
 }
 
-.navbar select {
+.right_nav select {
   color: #fff;
   background: transparent;
   border-radius: 6px;
   border: 2px solid #fff;
   padding: 5px 8px;
+  display: flex;
+  flex-direction: column;
 }
 
-.navbar option {
+.right_nav option {
   background-color: #94404e;
   color: #fff;
 }

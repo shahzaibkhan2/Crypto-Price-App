@@ -18,6 +18,11 @@
   color: #fff;
 }
 
+.hero .headingTwo {
+  margin: 40px 0;
+  font-size: max(3vw, 26px);
+}
+
 .hero form {
   display: flex;
   justify-content: space-between;
@@ -51,6 +56,24 @@
   font-size: 16px;
   cursor: pointer;
   border: none;
+}
+
+.hero .wallet_btn {
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  color: #fff;
+  background: #94404e;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.hero .wallet_btn:hover {
+  box-shadow: 0 0 20px 10px #94404e92;
+  transition: all;
+  transition-duration: 0.7s;
 }
 
 @media (max-width: 500px) {

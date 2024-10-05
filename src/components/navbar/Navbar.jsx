@@ -55,9 +55,15 @@ const Navbar = () => {
         <Link to="/">
           <li>Home</li>
         </Link>
-        <li>Blog</li>
-        <li>Features</li>
-        <li>Pricing</li>
+        <li>
+          <Link to="/transactions">Transactions</Link>
+        </li>
+        <li>
+          <Link to="#">Features</Link>
+        </li>
+        <li>
+          <Link to="#">Pricing</Link>
+        </li>
       </ul>
       <div className={styles.right_nav}>
         <select onClick={currencyHandler}>

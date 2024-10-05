@@ -1,10 +1,12 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "./Hero.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { cryptoActions } from "../../store/features/cryptoSlice";
+import { ToastContainer, toast } from "react-toastify";
 
 const Hero = () => {
   const { allCoin } = useSelector((state) => state.crypto);
+
   const dispatch = useDispatch();
   const inputRef = useRef();
 
@@ -23,33 +25,39 @@ const Hero = () => {
       dispatch(cryptoActions.displayCoin(allCoin));
     }
   };
+
   return (
-    <div className={styles.hero}>
-      <h1>
-        Biggest <br /> Marketplace For Crypto
-      </h1>
-      <p>
-        Welcome to the world's most biggest and largest marketplace for crypto.
-        Sign Up or Login with us to explore Crypto.
-      </p>
-      <form onSubmit={searchHandler}>
-        <input
-          onChange={inputHandler}
-          ref={inputRef}
-          type="text"
-          placeholder="Search crypto here..."
-          list="coinlist"
-        />
+    <>
+      <ToastContainer />
+      <div className={styles.hero}>
+        <h1>
+          Biggest <br /> Marketplace For Crypto
+        </h1>
+        <p>
+          Welcome to the world's most biggest and largest marketplace for
+          crypto. Sign Up or Login with us to explore Crypto.
+        </p>
+        <h2 className={styles.headingTwo}>
+          Cryptocurrency Prices Today By Market Cap
+        </h2>
+        <form onSubmit={searchHandler}>
+          <input
+            onChange={inputHandler}
+            ref={inputRef}
+            type="text"
+            placeholder="Search crypto here..."
+            list="coinlist"
+          />
+          <datalist id="coinlist">
+            {allCoin?.map((coin, index) => (
+              <option key={index} value={coin.name} />
+            ))}
+          </datalist>
 
-        <datalist id="coinlist">
-          {allCoin?.map((coin, index) => (
-            <option key={index} value={coin.name} />
-          ))}
-        </datalist>
-
-        <button type="submit">Search</button>
-      </form>
-    </div>
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </>
   );
 };
 
